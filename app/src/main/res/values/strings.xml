@@ -5,4 +5,5 @@
     <string name="valor_a_comprar">Ingrese el valor a comprar la tarjeta</string>
     <string name="numero_tarjeta">Ingrese el numero de la tarjeta</string>
     <string name="pago_de_cartera">Pago de cartera</string>
+    <string name="next">Continuar</string>
 </resources>

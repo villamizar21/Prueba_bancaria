@@ -1,4 +1,4 @@
-package com.example.prueba_bancaria.ui
+package com.example.prueba_bancaria.ui.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -9,25 +9,19 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.example.prueba_bancaria.ui.components.Footer
 import com.example.prueba_bancaria.ui.components.TopAppBar
-import com.example.prueba_bancaria.ui.viewModel.BinCheckViewModel
+import com.example.prueba_bancaria.utils.Constans
 
 @Composable
 fun MainView(navController: NavHostController) {
@@ -53,7 +47,7 @@ fun tarjetas() {
             modifier = Modifier
                 .padding(16.dp),
             shape = RoundedCornerShape(16.dp),
-            elevation = CardDefaults.cardElevation( // Elevación de la tarjeta
+            elevation = CardDefaults.cardElevation(
                 defaultElevation = 8.dp
             ),
             colors = CardDefaults.cardColors(
@@ -75,14 +69,14 @@ fun tarjetas() {
                     fontSize = 14.sp
                 )
                 Text(
-                    text = "$452.594",
+                    text = "$${Constans.SALDO}",
                     color = Color.White,
                     fontSize = 28.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "Saldo total: $452.594",
+                    text = "Saldo total: $${Constans.SALDO}",
                     color = Color.White.copy(alpha = 0.7f),
                     fontSize = 14.sp
                 )

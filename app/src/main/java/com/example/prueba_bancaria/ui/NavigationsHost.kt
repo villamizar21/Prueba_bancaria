@@ -5,6 +5,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.prueba_bancaria.ui.view.MainView
+import com.example.prueba_bancaria.ui.view.PaymentView
 
 @Composable
 fun NavigationHots(modifier: Modifier, navController: NavHostController) {

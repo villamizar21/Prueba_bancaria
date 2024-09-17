@@ -1,5 +1,8 @@
 package com.example.prueba_bancaria.utils
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.input.OffsetMapping
 import androidx.compose.ui.text.input.TransformedText
@@ -14,30 +17,9 @@ object Constans {
     const val HOST = "bin-ip-checker.p.rapidapi.com"
     const val API_KEY = "e0d8f5084cmsh2d3bc68c3448ad1p16d43cjsn16d89e00def8"
     const val SALDO = 452594
+    var TyPECARD  by mutableStateOf("")
 }
 
-object Utilities {
-    fun formatWithDecimalFormat(numberString: String): String {
-        if (numberString.isEmpty()) return ""
-        try {
-            val symbols = DecimalFormatSymbols(Locale.GERMANY)
-            val df = DecimalFormat("#,######", symbols)
-            return df.format(numberString.toLong())
-        } catch (e: NumberFormatException) {
-            return numberString
-        }
-    }
-
-    fun formatText(input: String): String {
-        val rawNumber = input.replace("[^\\d]".toRegex(), "")
-        val formattedNumber = if (rawNumber.isNotEmpty()) {
-            val number = rawNumber.toInt()
-            val formatter = DecimalFormat("#,###")
-            formatter.format(number)
-        } else ""
-        return "$formattedNumber"
-    }
-}
 class PrefixTransformation(val prefix: String) : VisualTransformation {
     override fun filter(text: AnnotatedString): TransformedText {
         return PrefixFilter(text, prefix)

@@ -20,7 +20,6 @@ class BinCheckViewModel @Inject constructor(
      var binResponse by mutableStateOf<BinResponse?>(null)
         private set
 
-   // viewModelScope.launch {
      fun checkBin(binBody: String){
         viewModelScope.launch {
          binResponse = repository.checkBin(binBody)

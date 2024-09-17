@@ -1,4 +1,4 @@
-package com.example.prueba_bancaria
+package com.example.prueba_bancaria.ui.view
 
 import android.annotation.SuppressLint
 import android.os.Bundle
