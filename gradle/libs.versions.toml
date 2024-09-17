@@ -12,6 +12,10 @@ retrofit = "2.9.0"
 hilt = "2.51.1"
 androidxHiltNavigationCompose = "1.2.0-alpha01"
 androidGradlePlugin = "8.1.4"
+httpLogging = "5.0.0-alpha.10"
+viewModelVersion = "2.5.1"
+coroutines = "1.6.4"
+okhttp = "4.9.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,6 +35,15 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+httpLoggingInterceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "httpLogging" }
+http3 = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+
+
+viewModel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewModelVersion" }
+liveData = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "viewModelVersion" }
+coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
+
 
 hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }

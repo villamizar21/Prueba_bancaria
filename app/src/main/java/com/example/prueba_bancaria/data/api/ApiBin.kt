@@ -3,9 +3,12 @@ package com.example.prueba_bancaria.data.api
 import com.example.prueba_bancaria.data.model.BinBody
 import com.example.prueba_bancaria.data.model.BinResponse
 import com.example.prueba_bancaria.utils.Constans
+import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.Headers
 import retrofit2.http.POST
+import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface ApiBin {
     @Headers(
@@ -15,6 +18,6 @@ interface ApiBin {
     )
     @POST("/")
     suspend fun checkBin(
-        @Body binRequest: BinBody
-    ): BinResponse
+        @Query("bin") bin: String
+    ): Response<BinResponse>
 }
