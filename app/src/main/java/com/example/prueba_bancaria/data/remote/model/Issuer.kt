@@ -1,4 +1,4 @@
-package com.example.prueba_bancaria.data.model
+package com.example.prueba_bancaria.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 

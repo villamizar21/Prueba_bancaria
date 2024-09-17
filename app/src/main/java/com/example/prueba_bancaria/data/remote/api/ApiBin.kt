@@ -1,7 +1,7 @@
-package com.example.prueba_bancaria.data.api
+package com.example.prueba_bancaria.data.remote.api
 
-import com.example.prueba_bancaria.data.model.BinBody
-import com.example.prueba_bancaria.data.model.BinResponse
+import com.example.prueba_bancaria.data.remote.model.BinBody
+import com.example.prueba_bancaria.data.remote.model.BinResponse
 import com.example.prueba_bancaria.utils.Constans
 import retrofit2.Response
 import retrofit2.http.Body

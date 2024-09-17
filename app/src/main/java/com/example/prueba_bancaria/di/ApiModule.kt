@@ -1,6 +1,6 @@
 package com.example.prueba_bancaria.di
 
-import com.example.prueba_bancaria.data.api.ApiBin
+import com.example.prueba_bancaria.data.remote.api.ApiBin
 import com.example.prueba_bancaria.utils.Constans.BASE_URL
 import dagger.Module
 import dagger.Provides
