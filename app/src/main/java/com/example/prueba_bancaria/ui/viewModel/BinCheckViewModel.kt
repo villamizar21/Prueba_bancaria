@@ -17,12 +17,25 @@ class BinCheckViewModel @Inject constructor(
     private val repository: CheckBinRespository
 ) : ViewModel() {
 
-     var binResponse by mutableStateOf<BinResponse?>(null)
+    var binResponse by mutableStateOf<BinResponse?>(null)
         private set
 
-     fun checkBin(binBody: String){
+    var errorMessage by mutableStateOf<String?>(null)
+        private set
+
+    fun checkBin(binBody: String) {
         viewModelScope.launch {
-         binResponse = repository.checkBin(binBody)
+            val result = repository.checkBin(binBody)
+            result.fold(
+                onSuccess = { response ->
+                    binResponse = response
+                    errorMessage = null
+                },
+                onFailure = { error ->
+                    binResponse = null
+                    errorMessage = error.localizedMessage
+                }
+            )
         }
     }
 }
