@@ -10,7 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.example.prueba_bancaria.ui.NavigationHots
+import com.example.prueba_bancaria.ui.navegation.NavigationHots
 import com.example.prueba_bancaria.ui.theme.Prueba_bancariaTheme
 import com.example.prueba_bancaria.utils.HideSystemUI
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,6 +31,10 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }
 

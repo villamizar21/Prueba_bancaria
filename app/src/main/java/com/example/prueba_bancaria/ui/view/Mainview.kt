@@ -15,13 +15,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.prueba_bancaria.R
 import com.example.prueba_bancaria.ui.components.Footer
 import com.example.prueba_bancaria.ui.components.TopAppBar
 import com.example.prueba_bancaria.utils.Constans
+import com.example.prueba_bancaria.utils.formatToPeso
 
 @Composable
 fun MainView(navController: NavHostController) {
@@ -69,14 +72,14 @@ fun tarjetas() {
                     fontSize = 14.sp
                 )
                 Text(
-                    text = "$${Constans.SALDO}",
+                    text = formatToPeso(Constans.SALDO.toLong()),
                     color = Color.White,
                     fontSize = 28.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "Saldo total: $${Constans.SALDO}",
+                    text = "Saldo total: ${formatToPeso(Constans.SALDO.toLong())}",
                     color = Color.White.copy(alpha = 0.7f),
                     fontSize = 14.sp
                 )
@@ -98,7 +101,7 @@ fun novedades(){
                 .padding(16.dp)
         ) {
             Text(
-                text = "¿Necesita ayuda? Descuide, escríbanos a través del chat...",
+                text = stringResource(id = R.string.novedades),
                 color = Color.White,
                 fontSize = 14.sp
             )

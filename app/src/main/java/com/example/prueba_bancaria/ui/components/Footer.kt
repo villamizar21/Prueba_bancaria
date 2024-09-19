@@ -1,6 +1,5 @@
 package com.example.prueba_bancaria.ui.components
 
-import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -26,8 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
-import com.example.prueba_bancaria.ui.Destinations
+import com.example.prueba_bancaria.ui.navegation.Destinations
 
 @Composable
 fun Footer(navController: NavHostController) {
