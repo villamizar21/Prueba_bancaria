@@ -4,9 +4,9 @@
 
     <string name="valor_a_comprar">Ingrese el valor a comprar la tarjeta</string>
     <string name="numero_tarjeta">Ingrese el numero de la tarjeta</string>
-    <string name="pago_de_cartera">Pago de cartera</string>
+    <string name="pago_de_cartera">Se efectuará el pago en los próximos 5 días.</string>
     <string name="next">Continuar</string>
-    <string name="pago_exitoso">Pago exitoso</string>
+    <string name="pago_exitoso">Compra de cartera creada exitosamente.</string>
     <string name="salir">Salir</string>
     <string name="compra">Compra de cartera</string>
     <string name="novedades">"¿Necesita ayuda? Descuide, escríbanos a través del chat..."</string>
